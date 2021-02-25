@@ -1,0 +1,23 @@
+<form>
+  <div class="row">
+    <div class="col-md-6 mt-5">
+      <label>Ofertas</label>
+      <select class="form-select" [(ngModel)]="offerSelected" name="offer">
+        <option></option>
+        <option *ngFor="let offer of offers" [ngValue]="offer">{{offer.versions[0].name}}</option>
+      </select>
+    </div>
+    <div class="col-md-6 mt-5">
+      <div class="row ">
+        <div class="col-md-12">
+          <label>Id Oferta:</label>
+          <input class="form-control" disabled [value]="offerSelected?.versions[0]?.id">
+        </div>
+        <div class="col-md-12 mt-4">
+          <label>Nombre:</label>
+          <input class="form-control" disabled [value]="offerSelected?.versions[0]?.name">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

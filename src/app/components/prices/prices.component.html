@@ -1,0 +1,15 @@
+<table class="table p-5">
+  <thead>
+  <tr>
+    <th>Nombre Precio</th>
+    <th>Monto</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let price of prices">
+    <td> {{price.versions[0].name}}</td>
+    <td> {{price.versions[0].price.amount | currency}}</td>
+  </tr>
+  </tbody>
+
+</table>
